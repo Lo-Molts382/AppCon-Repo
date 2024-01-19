@@ -40,7 +40,7 @@
             <a class = "active" href = "http://127.0.0.1:8000/account" id = "noline"> Account </a>
             <a id = "noline"> Button 3 </a>
         </div>
-        
+
         <h1> Hello World! </h1>
         <p> this is the account page. </p>
     </body>
