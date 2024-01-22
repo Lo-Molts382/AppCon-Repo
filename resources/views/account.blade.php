@@ -1,48 +1,24 @@
-<!DOCTYPE html>
-<html lang = "en-US">
-    <style>
-        .navbar {
-            overflow: hidden;
-            background-color: rgb(154, 154, 237);
-            padding: 10px;
-            margin: -8px -20px;
-            font-family: Georgia;
-            font-size: 16px;
-            color: black;
-         }
-        
-        a {
-            padding: 16px;
-            color: black;
-        }
+<script setup>
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import { Head } from '@inertiajs/vue3';
+</script>
 
-        #noline {
-            text-decoration: none;
-        }
+<!-- The account page can only be visible when the user is authenticated.-->
 
-        a:hover {
-            background-color: rgb(118, 118, 234);
-            color: white;
-        }
+<template>
+    <Head title="Dashboard" />
 
-        .active {
-            background-color: rgb(79, 79, 155);
-            color: white;
-        }
-    </style>
-    <head>
-            <title> Account Page </title>
-    </head>    
+    <AuthenticatedLayout>
+        <template #header>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Account Dashboard</h2>
+        </template>
 
-    <body>
-        <div class = "navbar">
-            <a href = "http://127.0.0.1:8000/landing" id = "noline"> Home </a>
-            <a class = "active" href = "http://127.0.0.1:8000/account" id = "noline"> Account </a>
-            <a id = "noline"> Button 3 </a>
+        <div class="py-12">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6 text-gray-900">You're logged in!</div>
+                </div>
+            </div>
         </div>
-
-        <h1> Hello World! </h1>
-        <p> this is the account page. </p>
-    </body>
-
-</html>
+    </AuthenticatedLayout>
+</template>

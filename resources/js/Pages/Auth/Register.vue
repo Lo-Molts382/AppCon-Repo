@@ -9,7 +9,7 @@ import { Head, Link, useForm } from '@inertiajs/vue3';
 const form = useForm({
     first_name: '',
     last_name: '',
-    name: '',
+    username: '',
     email: '',
     password: '',
     password_confirmation: '',
@@ -17,7 +17,7 @@ const form = useForm({
 
 const submit = () => {
     form.post(route('register'), {
-        onFinish: () => form.reset('password', 'password_confirmation'),
+        onFinish: () => form.reset('username', 'password', 'password_confirmation'),
     });
 };
 </script>
@@ -31,7 +31,7 @@ const submit = () => {
                 <InputLabel for="first_name" value="First Name" />
 
                 <TextInput
-                    id="first_name"
+                    id="First Name"
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.first_name"
@@ -39,15 +39,15 @@ const submit = () => {
                     autofocus
                     autocomplete="first_name"
                 />
-
-                <InputError class="mt-2" :message="form.errors.name" />
+                <br>
+                <InputError class="mt-2" :message="form.errors.first_name" />
             </div>
 
             <div>
                 <InputLabel for="last_name" value="Last Name" />
 
                 <TextInput
-                    id="last_name"
+                    id="Last Name"
                     type="text"
                     class="mt-1 block w-full"
                     v-model="form.last_name"
@@ -55,8 +55,8 @@ const submit = () => {
                     autofocus
                     autocomplete="last_name"
                 />
-
-                <InputError class="mt-2" :message="form.errors.name" />
+                <br>
+                <InputError class="mt-2" :message="form.errors.last_name" />
             </div>
 
             <div>
@@ -72,7 +72,7 @@ const submit = () => {
                     autocomplete="username"
                 />
 
-                <InputError class="mt-2" :message="form.errors.name" />
+                <InputError class="mt-2" :message="form.errors.username" />
             </div>
 
             <div class="mt-4">

@@ -32,11 +32,11 @@ const submit = () => {
 <template>
     <GuestLayout>
         <Head title="Log in" />
-
+        
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
             {{ status }}
         </div>
-
+        
         <form @submit.prevent="submit">
             <div>
                 <InputLabel for="email" value="Email" />
@@ -48,7 +48,7 @@ const submit = () => {
                     v-model="form.email"
                     required
                     autofocus
-                    autocomplete="username"
+                    autocomplete="email"
                 />
 
                 <InputError class="mt-2" :message="form.errors.email" />
