@@ -33,10 +33,10 @@ const showingNavigationDropdown = ref(false);
                                     Account
                                 </NavLink>
                                 
+                                <!-- BUG: DOES NOT REDIRECT PROPERLY -->
                                 <NavLink :href="route('logout')" method="post">
                                     Home
                                 </NavLink>
-
                             </div>
                         </div>
 

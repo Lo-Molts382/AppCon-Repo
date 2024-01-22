@@ -1,5 +1,7 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
+import NavLink from '@/Components/NavLink.vue';
+import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 
 defineProps({
     canLogin: {
@@ -25,6 +27,8 @@ defineProps({
     <div
         class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white"
     >
+
+    <div>
         <div v-if="canLogin" class="sm:fixed sm:top-0 sm:left-0 p-6 text-end">
             <!-- USER AUTHENTICATED -->
             <Link
@@ -50,8 +54,13 @@ defineProps({
             </template>
         </div>
 
+        <div>
+            <h1 style = "color: white;"> Hello World! This is the Account Page. </h1>
+        </div>
+    </div>
+<!--
          <div class="max-w-7xl mx-auto p-6 lg:p-8">
-           <!-- <div class="flex justify-center">
+            <div class="flex justify-center">
                 <svg
                     viewBox="0 0 62 65"
                     fill="none"
@@ -63,7 +72,7 @@ defineProps({
                         fill="#FF2D20"
                     />
                 </svg>
-            </div> -->
+            </div> 
 
             <div class="mt-16">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
@@ -320,7 +329,7 @@ defineProps({
                     Laravel v{{ laravelVersion }} (PHP v{{ phpVersion }})
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </template>
 
