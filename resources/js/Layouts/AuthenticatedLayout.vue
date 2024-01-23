@@ -33,8 +33,8 @@ const showingNavigationDropdown = ref(false);
                                     Account
                                 </NavLink>
                                 
-                                <!-- BUG: DOES NOT REDIRECT PROPERLY -->
-                                <NavLink :href="route('logout')" method="post">
+                                <!-- NOW REDIRECTS, BUT THERE MAY BE A DIFFERENT WAY TO DO-->
+                                <NavLink href="http://127.0.0.1:8000/">
                                     Home
                                 </NavLink>
                             </div>
