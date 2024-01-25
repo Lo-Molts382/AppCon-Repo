@@ -44,7 +44,7 @@ const submit = () => {
                 <TextInput
                     id="username"
                     type="username"                
-                    class="mt-1 block w-full"
+                    class="mt-1 block w-full h-10" 
                     v-model="form.username"
                     required
                     autofocus
