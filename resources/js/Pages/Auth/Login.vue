@@ -43,8 +43,9 @@ const submit = () => {
 
                 <TextInput
                     id="username"
-                    type="username"                
-                    class="mt-1 block w-full h-10" 
+                    type="username"        
+                    class="mt-1 block w-full h-10"
+                    style="padding-left:15px;" 
                     v-model="form.username"
                     required
                     autofocus
