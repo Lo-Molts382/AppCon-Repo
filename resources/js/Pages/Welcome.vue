@@ -51,14 +51,14 @@ defineProps({
                 <template v-else>
 
                     <div style = 
-                        "padding: 25px 1550px 25px 25px;  
+                        "padding: 25px 145px 25px 25px;  
                         background-color: rgb(27, 39, 64);
-                        margin: -25px -25px;">
+                        margin: -25px -8px;">
                         <!-- USER UNAUTHENTICATED -->
 
                         <Link
                             v-if="canRegister"
-                            :href="route('login')" style = " margin-right:40px;"
+                            :href="route('login')" style = " margin-right:30px;"
                             class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                             >Log in</Link>
 
